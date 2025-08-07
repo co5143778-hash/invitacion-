@@ -16,6 +16,124 @@
     --shadow-gold: 0 4px 20px hsl(42 85% 55% / 0.25);
 }
 
+/* Animaciones de iconos modernos */
+.animated-heart {
+    transition: transform 0.3s ease;
+}
+
+.animated-heart:hover {
+    transform: scale(1.1);
+}
+
+.animated-heart .heart-path {
+    filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.6));
+}
+
+.animated-celebration {
+    transition: transform 0.3s ease;
+}
+
+.animated-celebration:hover {
+    transform: scale(1.1);
+}
+
+.animated-camera {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.animated-camera:hover {
+    transform: scale(1.1);
+}
+
+.animated-camera:active .flash-effect {
+    animation: cameraFlash 0.3s ease-in-out;
+}
+
+@keyframes cameraFlash {
+    0% { opacity: 0; r: 0; }
+    50% { opacity: 0.8; r: 12; }
+    100% { opacity: 0; r: 0; }
+}
+
+.animated-music {
+    transition: transform 0.3s ease;
+}
+
+.animated-music:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.animated-dresscode {
+    transition: transform 0.3s ease;
+}
+
+.animated-dresscode:hover {
+    transform: scale(1.1);
+}
+
+.animated-clipboard {
+    transition: transform 0.3s ease;
+}
+
+.animated-clipboard:hover {
+    transform: scale(1.1);
+}
+
+.animated-gift {
+    transition: transform 0.3s ease;
+}
+
+.animated-gift:hover {
+    transform: scale(1.1);
+}
+
+.animated-gift:hover .gift-lid {
+    animation: giftOpen 0.5s ease-in-out;
+}
+
+@keyframes giftOpen {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px) rotateX(10deg); }
+    100% { transform: translateY(0); }
+}
+
+.animated-whatsapp {
+    transition: transform 0.3s ease;
+}
+
+.animated-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.animated-volume {
+    transition: transform 0.3s ease;
+}
+
+.animated-volume:hover {
+    transform: scale(1.1);
+}
+
+/* Efectos globales para iconos */
+.event-icon, .party-icon, .gift-icon, .whatsapp-icon, .camera-icon, .modal-icon {
+    overflow: visible;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Mejoras de rendimiento */
+.animated-heart svg,
+.animated-celebration svg,
+.animated-camera svg,
+.animated-music svg,
+.animated-dresscode svg,
+.animated-clipboard svg,
+.animated-gift svg,
+.animated-whatsapp svg,
+.animated-volume svg {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
 /* Reset y base */
 * {
     margin: 0;
