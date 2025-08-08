@@ -23,6 +23,14 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 0.75rem;
+    background: transparent; /* fondo y sombra ahora los maneja page-shell */
+    box-shadow: none;
+}
+
+/* Contenedor envolvente para sombra continua a lo largo de toda la página */
+.page-shell {
+    max-width: 1100px;
+    margin: 0 auto;
     background: #ffffff;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
@@ -154,7 +162,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff; /* lados totalmente blancos */
+    background-color: hsl(var(--cream)); /* igual que el fondo inferior */
     color: hsl(var(--foreground));
     line-height: 1.6;
 }
@@ -833,7 +841,8 @@ body {
         background-color: hsl(var(--warm-white)); 
     }
     /* El contenedor ocupa todo el ancho útil en móvil */
-    .site-container { padding: 0 1rem; max-width: none; box-shadow: none; }
+    .site-container { padding: 0 1rem; max-width: none; }
+    .page-shell { box-shadow: none; }
     .hero-split { border-radius: 0; }
 
     .section-title {
