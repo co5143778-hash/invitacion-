@@ -97,666 +97,378 @@
         <div id="youtube-player" style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></div>
     </div>
 
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="date">15.08.2025</div>
-                <h1 class="names">Rafael <span class="ampersand">&</span> Juana</h1>
-                <blockquote class="quote">
-                    "Todos somos mortales,<br />
-                    hasta el primer beso y la segunda copa de vino"
-                </blockquote>
-                <div class="scroll-indicator">
-                    <div class="scroll-mouse">
-                        <div class="scroll-wheel"></div>
+    <!-- Hero Section dividida 50/50 -->
+    <div class="hero-wrapper">
+        <div class="hero-split">
+            <!-- Lado izquierdo: mantiene imagen y efecto scroll -->
+            <div class="hero-left">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="date">15.08.2025</div>
+                        <h1 class="names">Rafael <span class="ampersand">&</span> Juana</h1>
+                        <blockquote class="quote">
+                            "Todos somos mortales,<br />
+                            hasta el primer beso y la segunda copa de vino"
+                        </blockquote>
+                        <div class="scroll-indicator">
+                            <div class="scroll-mouse">
+                                <div class="scroll-wheel"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <!-- Lado derecho: imagen sin efecto -->
+            <div class="hero-right">
+                <img src="portada-derecha.png" alt="Portada lateral derecha" />
             </div>
         </div>
     </div>
 
     <!-- Content -->
     <div class="content">
-        <!-- Countdown -->
-        <section class="countdown-section">
-            <h2 class="section-title">Falta</h2>
-            <div class="countdown-container">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-label">DÍAS</div>
-                </div>
-                <div class="countdown-separator">|</div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-label">HS</div>
-                </div>
-                <div class="countdown-separator">|</div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-label">MIN</div>
-                </div>
-                <div class="countdown-separator">|</div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="seconds">00</div>
-                    <div class="countdown-label">SEG</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ceremony & Celebration -->
-        <section class="events-section">
-            <div class="events-container">
-                <!-- Ceremony -->
-                <div class="event-card">
-                    <div class="event-icon animated-heart">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <defs>
-                                <linearGradient id="ceremonyHeartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
-                                    <stop offset="50%" style="stop-color:#ff8e8e;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#ff4757;stop-opacity:1" />
-                                </linearGradient>
-                                <filter id="heartGlow">
-                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                                    <feMerge> 
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" 
-                                  fill="url(#ceremonyHeartGradient)" stroke="url(#ceremonyHeartGradient)" 
-                                  filter="url(#heartGlow)" class="ceremony-heart-path"></path>
-                        </svg>
+        <div class="site-container">
+            <!-- Countdown -->
+            <section class="countdown-section">
+                <h2 class="section-title">Falta</h2>
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">DÍAS</div>
                     </div>
-                    <h3 class="event-title">Ceremonia</h3>
-                    <div class="event-details">
-                        <h4>Día</h4>
-                        <p>Sábado 15 de Agosto - 10hs</p>
+                    <div class="countdown-separator">|</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">HS</div>
                     </div>
-                    <div class="event-details">
-                        <h4>Lugar</h4>
-                        <p>Parroquia Nuestra Señora de Lujan</p>
-                        <p class="event-address">Av. Pergamino 203 - Santo Domingo</p>
+                    <div class="countdown-separator">|</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">MIN</div>
                     </div>
-                    <button class="btn-wedding" onclick="openLocation('ceremony')">¿Cómo llegar?</button>
+                    <div class="countdown-separator">|</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">SEG</div>
+                    </div>
                 </div>
+            </section>
 
-                <!-- Celebration -->
-                <div class="event-card">
-                    <div class="event-icon animated-celebration">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <defs>
-                                <linearGradient id="champagneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
-                                    <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
-                                </linearGradient>
-                                <radialGradient id="bubbleGradient" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
-                                    <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0.3" />
-                                </radialGradient>
-                            </defs>
-                            <!-- Copa izquierda -->
-                            <path d="M5 13V8h4v5l-2 4h0l-2-4z" fill="url(#champagneGradient)" stroke="url(#champagneGradient)" class="glass-left">
-                                <animateTransform attributeName="transform" type="rotate" 
-                                    values="0 7 11;-10 7 11;10 7 11;0 7 11" dur="3s" repeatCount="indefinite"/>
-                            </path>
-                            <line x1="5" y1="8" x2="9" y2="8" stroke="url(#champagneGradient)" stroke-width="2"/>
-                            <line x1="7" y1="17" x2="7" y2="20" stroke="url(#champagneGradient)" stroke-width="2"/>
-                            
-                            <!-- Copa derecha -->
-                            <path d="M15 13V8h4v5l-2 4h0l-2-4z" fill="url(#champagneGradient)" stroke="url(#champagneGradient)" class="glass-right">
-                                <animateTransform attributeName="transform" type="rotate" 
-                                    values="0 17 11;10 17 11;-10 17 11;0 17 11" dur="3s" repeatCount="indefinite" begin="0.5s"/>
-                            </path>
-                            <line x1="15" y1="8" x2="19" y2="8" stroke="url(#champagneGradient)" stroke-width="2"/>
-                            <line x1="17" y1="17" x2="17" y2="20" stroke="url(#champagneGradient)" stroke-width="2"/>
-                            
-                            <!-- Burbujas de champagne -->
-                            <circle cx="7" cy="10" r="1" fill="url(#bubbleGradient)" opacity="0" class="bubble">
-                                <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-                                <animateTransform attributeName="transform" type="translate" values="0,0;-2,-8" dur="2s" repeatCount="indefinite" begin="0s"/>
-                            </circle>
-                            <circle cx="17" cy="11" r="0.8" fill="url(#bubbleGradient)" opacity="0" class="bubble">
-                                <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.7s"/>
-                                <animateTransform attributeName="transform" type="translate" values="0,0;3,-10" dur="1.8s" repeatCount="indefinite" begin="0.7s"/>
-                            </circle>
-                            <circle cx="8" cy="12" r="0.6" fill="url(#bubbleGradient)" opacity="0" class="bubble">
-                                <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
-                                <animateTransform attributeName="transform" type="translate" values="0,0;-1,-6" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
-                            </circle>
-                            
-                            <!-- Efectos de brillo -->
-                            <circle cx="12" cy="6" r="2" fill="#ffd700" opacity="0" class="celebration-sparkle">
-                                <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" repeatCount="indefinite"/>
-                                <animate attributeName="r" values="0;3;0" dur="1.5s" repeatCount="indefinite"/>
-                            </circle>
-                        </svg>
-                    </div>
-                    <h3 class="event-title">Celebración</h3>
-                    <div class="event-details">
-                        <h4>Día</h4>
-                        <p>Sábado 15 de Agosto - 20hs</p>
-                    </div>
-                    <div class="event-details">
-                        <h4>Lugar</h4>
-                        <p>Salón de fiestas Avril</p>
-                        <p class="event-address">Av. Los Reartes 12 - Santo Domingo</p>
-                    </div>
-                    <button class="btn-wedding" onclick="openLocation('celebration')">¿Cómo llegar?</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo Gallery -->
-        <section class="gallery-section">
-            <div class="gallery-container">
-                <h2 class="section-title">Retratos de Nuestro Amor</h2>
-                <p class="section-subtitle">Un minuto, un segundo, un instante que queda en la eternidad</p>
-                
-                <div class="camera-icon animated-camera">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <defs>
-                            <linearGradient id="cameraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#2980b9;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#1abc9c;stop-opacity:1" />
-                            </linearGradient>
-                            <radialGradient id="flashGradient" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#ffeb3b;stop-opacity:0" />
-                            </radialGradient>
-                        </defs>
-                        <!-- Cuerpo de la cámara -->
-                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" 
-                              fill="url(#cameraGradient)" stroke="url(#cameraGradient)" class="camera-body">
-                            <animateTransform attributeName="transform" type="scale" 
-                                values="1;1.05;1" dur="3s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <!-- Lente principal -->
-                        <circle cx="12" cy="13" r="3" fill="none" stroke="url(#cameraGradient)" stroke-width="2" class="camera-lens">
-                            <animate attributeName="stroke-width" values="2;4;2" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <!-- Lente interno -->
-                        <circle cx="12" cy="13" r="1.5" fill="url(#cameraGradient)" opacity="0.7" class="inner-lens">
-                            <animate attributeName="r" values="1.5;2;1.5" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <!-- Flash -->
-                        <rect x="16" y="6.5" width="2" height="1.5" rx="0.3" fill="#ffeb3b" class="camera-flash">
-                            <animate attributeName="opacity" values="0.3;1;0.3" dur="0.2s" repeatCount="1" begin="click"/>
-                        </rect>
-                        
-                        <!-- Efecto de flash -->
-                        <circle cx="12" cy="13" r="8" fill="url(#flashGradient)" opacity="0" class="flash-effect">
-                            <animate attributeName="opacity" values="0;0.8;0" dur="0.3s" repeatCount="1" begin="click"/>
-                            <animate attributeName="r" values="0;12;0" dur="0.3s" repeatCount="1" begin="click"/>
-                        </circle>
-                        
-                        <!-- Partículas de captura -->
-                        <circle cx="8" cy="10" r="1" fill="#ffffff" opacity="0" class="capture-particle">
-                            <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-                            <animateTransform attributeName="transform" type="translate" values="0,0;-3,-6" dur="2s" repeatCount="indefinite" begin="0s"/>
-                        </circle>
-                        <circle cx="16" cy="11" r="0.8" fill="#ffeb3b" opacity="0" class="capture-particle">
-                            <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
-                            <animateTransform attributeName="transform" type="translate" values="0,0;4,-8" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
-                        </circle>
-                    </svg>
-                </div>
-
-                <!-- Carrusel -->
-                <div class="carousel-container">
-                    <button class="carousel-btn carousel-prev" id="prevBtn">❮</button>
-                    <div class="carousel-track-container">
-                        <div class="carousel-track" id="carouselTrack">
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop&crop=center" alt="Pareja de novios en ceremonia">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=400&fit=crop&crop=center" alt="Anillos de boda">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=400&fit=crop&crop=center" alt="Pareja romántica en jardín">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=400&fit=crop&crop=center" alt="Decoración de boda">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=400&h=400&fit=crop&crop=center" alt="Mesa de boda elegante">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="C:\Users\j.arias1\Downloads\segunda.png" alt="Pareja bailando">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop&crop=center" alt="Vestido de novia elegante">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="C:\Users\j.arias1\Downloads\primera.jpg" alt="Flores de boda">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400&h=400&fit=crop&crop=center" alt="Manos con anillos de compromiso">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="C:\Users\j.arias1\Downloads\tercera.jpg" alt="Ramo de novia hermoso">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&h=400&fit=crop&crop=center" alt="Pareja en la playa al atardecer">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="C:\Users\j.arias1\Downloads\cuarto.webp" alt="Detalles de boda elegantes">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-btn carousel-next" id="nextBtn">❯</button>
-                </div>
-
-                <div class="carousel-counter">
-                    <span id="currentSlide">1</span> / <span id="totalSlides">12</span> fotos
-                </div>
-            </div>
-        </section>
-
-        <!-- Party Information -->
-        <section class="party-section">
-            <div class="party-container">
-                <h2 class="section-title">Fiesta</h2>
-                <p class="section-subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
-
-                <div class="party-grid">
-                    <div class="party-card">
-                        <div class="party-icon animated-music">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <!-- Ceremony & Celebration -->
+            <section class="events-section">
+                <div class="events-container">
+                    <!-- Ceremony -->
+                    <div class="event-card">
+                        <div class="event-icon animated-heart">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <defs>
-                                    <linearGradient id="musicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
-                                        <stop offset="50%" style="stop-color:#f39c12;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
-                                    </linearGradient>
-                                    <radialGradient id="noteGradient" cx="50%" cy="50%" r="50%">
+                                    <linearGradient id="ceremonyHeartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:0.8" />
+                                        <stop offset="50%" style="stop-color:#ff8e8e;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ff4757;stop-opacity:1" />
+                                    </linearGradient>
+                                    <filter id="heartGlow">
+                                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                        <feMerge> 
+                                            <feMergeNode in="coloredBlur"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" 
+                                      fill="url(#ceremonyHeartGradient)" stroke="url(#ceremonyHeartGradient)" 
+                                      filter="url(#heartGlow)" class="ceremony-heart-path"></path>
+                            </svg>
+                        </div>
+                        <h3 class="event-title">Ceremonia</h3>
+                        <div class="event-details">
+                            <h4>Día</h4>
+                            <p>Sábado 15 de Agosto - 10hs</p>
+                        </div>
+                        <div class="event-details">
+                            <h4>Lugar</h4>
+                            <p>Parroquia Nuestra Señora de Lujan</p>
+                            <p class="event-address">Av. Pergamino 203 - Santo Domingo</p>
+                        </div>
+                        <button class="btn-wedding" onclick="openLocation('ceremony')">¿Cómo llegar?</button>
+                    </div>
+
+                    <!-- Celebration -->
+                    <div class="event-card">
+                        <div class="event-icon animated-celebration">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <defs>
+                                    <linearGradient id="champagneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+                                    </linearGradient>
+                                    <radialGradient id="bubbleGradient" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0.3" />
                                     </radialGradient>
                                 </defs>
-                                <!-- Nota musical principal -->
-                                <path d="M9 18V5l12-2v13" fill="none" stroke="url(#musicGradient)" stroke-width="2.5" class="music-note">
-                                    <animate attributeName="stroke-width" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite"/>
+                                <!-- Copa izquierda -->
+                                <path d="M5 13V8h4v5l-2 4h0l-2-4z" fill="url(#champagneGradient)" stroke="url(#champagneGradient)" class="glass-left">
+                                    <animateTransform attributeName="transform" type="rotate" 
+                                        values="0 7 11;-10 7 11;10 7 11;0 7 11" dur="3s" repeatCount="indefinite"/>
                                 </path>
+                                <line x1="5" y1="8" x2="9" y2="8" stroke="url(#champagneGradient)" stroke-width="2"/>
+                                <line x1="7" y1="17" x2="7" y2="20" stroke="url(#champagneGradient)" stroke-width="2"/>
                                 
-                                <!-- Círculos de notas -->
-                                <circle cx="6" cy="18" r="3" fill="url(#noteGradient)" stroke="url(#musicGradient)" class="note-circle">
-                                    <animateTransform attributeName="transform" type="scale" 
-                                        values="1;1.2;1" dur="2s" repeatCount="indefinite"/>
-                                </circle>
-                                <circle cx="18" cy="16" r="3" fill="url(#noteGradient)" stroke="url(#musicGradient)" class="note-circle">
-                                    <animateTransform attributeName="transform" type="scale" 
-                                        values="1;1.2;1" dur="2s" repeatCount="indefinite" begin="0.5s"/>
-                                </circle>
+                                <!-- Copa derecha -->
+                                <path d="M15 13V8h4v5l-2 4h0l-2-4z" fill="url(#champagneGradient)" stroke="url(#champagneGradient)" class="glass-right">
+                                    <animateTransform attributeName="transform" type="rotate" 
+                                        values="0 17 11;10 17 11;-10 17 11;0 17 11" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+                                </path>
+                                <line x1="15" y1="8" x2="19" y2="8" stroke="url(#champagneGradient)" stroke-width="2"/>
+                                <line x1="17" y1="17" x2="17" y2="20" stroke="url(#champagneGradient)" stroke-width="2"/>
                                 
-                                <!-- Ondas sonoras -->
-                                <path d="M22 12c0-2.76-1.24-5.26-3.2-6.93" stroke="#ff6b6b" stroke-width="1.5" fill="none" opacity="0" class="sound-wave">
-                                    <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0s"/>
-                                </path>
-                                <path d="M25 12c0-4.14-1.86-7.89-4.8-10.39" stroke="#ff6b6b" stroke-width="1.5" fill="none" opacity="0" class="sound-wave">
-                                    <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
-                                </path>
-                                <path d="M28 12c0-5.52-2.48-10.52-6.4-13.86" stroke="#ff6b6b" stroke-width="1.5" fill="none" opacity="0" class="sound-wave">
-                                    <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
-                                </path>
-                                
-                                <!-- Notas musicales flotantes -->
-                                <text x="2" y="8" font-family="Arial" font-size="8" fill="#ff6b6b" opacity="0" class="floating-note">♪
+                                <!-- Burbujas de champagne -->
+                                <circle cx="7" cy="10" r="1" fill="url(#bubbleGradient)" opacity="0" class="bubble">
                                     <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-                                    <animateTransform attributeName="transform" type="translate" values="0,0;-3,-10" dur="2s" repeatCount="indefinite" begin="0s"/>
-                                </text>
-                                <text x="22" y="10" font-family="Arial" font-size="6" fill="#e74c3c" opacity="0" class="floating-note">♫
-                                    <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
-                                    <animateTransform attributeName="transform" type="translate" values="0,0;5,-12" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
-                                </text>
-                                <text x="12" y="6" font-family="Arial" font-size="7" fill="#f39c12" opacity="0" class="floating-note">♪
-                                    <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
-                                    <animateTransform attributeName="transform" type="translate" values="0,0;0,-8" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
-                                </text>
+                                    <animateTransform attributeName="transform" type="translate" values="0,0;-2,-8" dur="2s" repeatCount="indefinite" begin="0s"/>
+                                </circle>
+                                <circle cx="17" cy="11" r="0.8" fill="url(#bubbleGradient)" opacity="0" class="bubble">
+                                    <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.7s"/>
+                                    <animateTransform attributeName="transform" type="translate" values="0,0;3,-10" dur="1.8s" repeatCount="indefinite" begin="0.7s"/>
+                                </circle>
+                                <circle cx="8" cy="12" r="0.6" fill="url(#bubbleGradient)" opacity="0" class="bubble">
+                                    <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
+                                    <animateTransform attributeName="transform" type="translate" values="0,0;-1,-6" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
+                                </circle>
+                                
+                                <!-- Efectos de brillo -->
+                                <circle cx="12" cy="6" r="2" fill="#ffd700" opacity="0" class="celebration-sparkle">
+                                    <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" repeatCount="indefinite"/>
+                                    <animate attributeName="r" values="0;3;0" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
                             </svg>
                         </div>
-                        <h3>Música</h3>
-                        <p>¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
-                        <button class="btn-wedding" onclick="suggestMusic()">Sugerir canción</button>
-                    </div>
-
-                    <div class="party-card">
-                        <div class="party-icon animated-dresscode">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <defs>
-                                    <linearGradient id="bagGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
-                                        <stop offset="50%" style="stop-color:#8e44ad;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#e91e63;stop-opacity:1" />
-                                    </linearGradient>
-                                    <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#f8c291;stop-opacity:0.8" />
-                                    </linearGradient>
-                                </defs>
-                                <!-- Bolsa principal -->
-                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" 
-                                      fill="url(#bagGradient)" stroke="url(#bagGradient)" class="shopping-bag">
-                                    <animateTransform attributeName="transform" type="scale" 
-                                        values="1;1.05;1" dur="3s" repeatCount="indefinite"/>
-                                </path>
-                                
-                                <!-- Línea superior -->
-                                <line x1="3" y1="6" x2="21" y2="6" stroke="url(#bagGradient)" stroke-width="2.5" class="bag-line">
-                                    <animate attributeName="stroke-width" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite"/>
-                                </line>
-                                
-                                <!-- Asa -->
-                                <path d="M16 10a4 4 0 0 1-8 0" stroke="url(#bagGradient)" stroke-width="2.5" fill="none" class="bag-handle">
-                                    <animate attributeName="stroke-width" values="2.5;3;2.5" dur="2.5s" repeatCount="indefinite"/>
-                                </path>
-                                
-                                <!-- Destellos de lujo -->
-                                <circle cx="8" cy="12" r="1" fill="url(#sparkleGradient)" opacity="0" class="luxury-sparkle">
-                                    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-                                    <animate attributeName="r" values="0.5;1.5;0.5" dur="2s" repeatCount="indefinite" begin="0s"/>
-                                </circle>
-                                <circle cx="16" cy="14" r="0.8" fill="url(#sparkleGradient)" opacity="0" class="luxury-sparkle">
-                                    <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite" begin="0.7s"/>
-                                    <animate attributeName="r" values="0.4;1.2;0.4" dur="2.2s" repeatCount="indefinite" begin="0.7s"/>
-                                </circle>
-                                <circle cx="12" cy="16" r="1.2" fill="url(#sparkleGradient)" opacity="0" class="luxury-sparkle">
-                                    <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="1.4s"/>
-                                    <animate attributeName="r" values="0.6;1.8;0.6" dur="1.8s" repeatCount="indefinite" begin="1.4s"/>
-                                </circle>
-                                
-                                <!-- Etiqueta de moda -->
-                                <rect x="10" y="8" width="4" height="2" rx="0.5" fill="#ffffff" opacity="0.8" class="fashion-tag">
-                                    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
-                                </rect>
-                                <text x="12" y="9.2" font-family="Arial" font-size="1.2" fill="#9b59b6" text-anchor="middle" class="tag-text">✨</text>
-                                
-                                <!-- Partículas de elegancia -->
-                                <polygon points="6,8 7,10 5,10" fill="#f8c291" opacity="0" class="elegance-particle">
-                                    <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0s"/>
-                                    <animateTransform attributeName="transform" type="translate" values="0,0;-2,-5" dur="1.5s" repeatCount="indefinite" begin="0s"/>
-                                </polygon>
-                                <polygon points="18,9 19,11 17,11" fill="#e91e63" opacity="0" class="elegance-particle">
-                                    <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.5s"/>
-                                    <animateTransform attributeName="transform" type="translate" values="0,0;3,-7" dur="1.8s" repeatCount="indefinite" begin="0.5s"/>
-                                </polygon>
-                            </svg>
+                        <h3 class="event-title">Celebración</h3>
+                        <div class="event-details">
+                            <h4>Día</h4>
+                            <p>Sábado 15 de Agosto - 20hs</p>
                         </div>
-                        <h3>Dress Code</h3>
-                        <p>Una orientación para tu vestuario</p>
-                        <button class="btn-wedding" onclick="showDressCode()">Ver más</button>
-                    </div>
-
-                    <div class="party-card">
-                        <div class="party-icon animated-clipboard">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <defs>
-                                    <linearGradient id="clipboardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
-                                        <stop offset="50%" style="stop-color:#2ecc71;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#16a085;stop-opacity:1" />
-                                    </linearGradient>
-                                    <linearGradient id="paperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#ecf0f1;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                
-                                <!-- Clip superior -->
-                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" 
-                                      fill="url(#clipboardGradient)" stroke="url(#clipboardGradient)" class="clipboard-clip">
-                                    <animateTransform attributeName="transform" type="scale" 
-                                        values="1;1.1;1" dur="2s" repeatCount="indefinite"/>
-                                </rect>
-                                
-                                <!-- Papel del clipboard -->
-                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" 
-                                      fill="url(#paperGradient)" stroke="url(#clipboardGradient)" stroke-width="2" class="clipboard-paper">
-                                    <animate attributeName="stroke-width" values="2;2.5;2" dur="3s" repeatCount="indefinite"/>
-                                </path>
-                                
-                                <!-- Líneas de texto animadas -->
-                                <path d="M12 11h4" stroke="url(#clipboardGradient)" stroke-width="2" class="text-line" opacity="0">
-                                    <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite" begin="0s"/>
-                                    <animate attributeName="stroke-width" values="1;2;1" dur="3s" repeatCount="indefinite" begin="0s"/>
-                                </path>
-                                <path d="M12 16h4" stroke="url(#clipboardGradient)" stroke-width="2" class="text-line" opacity="0">
-                                    <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite" begin="0.5s"/>
-                                    <animate attributeName="stroke-width" values="1;2;1" dur="3s" repeatCount="indefinite" begin="0.5s"/>
-                                </path>
-                                
-                                <!-- Puntos de lista animados -->
-                                <circle cx="8" cy="11" r="0.5" fill="url(#clipboardGradient)" class="list-dot" opacity="0">
-                                    <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite" begin="0s"/>
-                                    <animate attributeName="r" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="0s"/>
-                                </circle>
-                                <circle cx="8" cy="16" r="0.5" fill="url(#clipboardGradient)" class="list-dot" opacity="0">
-                                    <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite" begin="0.5s"/>
-                                    <animate attributeName="r" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="0.5s"/>
-                                </circle>
-                                
-                                <!-- Efectos de escritura -->
-                                <circle cx="17" cy="13" r="1" fill="#3498db" opacity="0" class="writing-effect">
-                                    <animate attributeName="opacity" values="0;0.7;0" dur="1s" repeatCount="indefinite" begin="2s"/>
-                                    <animate attributeName="r" values="0;2;0" dur="1s" repeatCount="indefinite" begin="2s"/>
-                                </circle>
-                                
-                                <!-- Checkmarks dinámicos -->
-                                <path d="M10 13l2 2 4-4" stroke="#27ae60" stroke-width="1.5" fill="none" opacity="0" class="checkmark">
-                                    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="1.5s"/>
-                                    <animate attributeName="stroke-width" values="1;2;1" dur="2s" repeatCount="indefinite" begin="1.5s"/>
-                                </path>
-                            </svg>
+                        <div class="event-details">
+                            <h4>Lugar</h4>
+                            <p>Salón de fiestas Avril</p>
+                            <p class="event-address">Av. Los Reartes 12 - Santo Domingo</p>
                         </div>
-                        <h3>Tips y Notas</h3>
-                        <p>Información adicional para tener en cuenta</p>
-                        <button class="btn-wedding" onclick="showTips()">+ Info</button>
+                        <button class="btn-wedding" onclick="openLocation('celebration')">¿Cómo llegar?</button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Gifts -->
-        <section class="gifts-section">
-            <div class="gifts-container">
-                <h2 class="section-title">Regalos</h2>
-                <p class="section-subtitle">Si deseas regalarnos algo más que tu hermosa presencia.</p>
-                
-                <div class="gift-icon animated-gift">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <defs>
-                            <linearGradient id="giftBoxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#c0392b;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
-                            </linearGradient>
-                            <linearGradient id="ribbonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#f1c40f;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#f39c12;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
-                            </linearGradient>
-                            <radialGradient id="magicGradient" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0" />
-                            </radialGradient>
-                        </defs>
-                        
-                        <!-- Caja del regalo -->
-                        <polyline points="20,12 20,22 4,22 4,12" 
-                                  fill="url(#giftBoxGradient)" stroke="url(#giftBoxGradient)" class="gift-box">
-                            <animateTransform attributeName="transform" type="scale" 
-                                values="1;1.02;1" dur="3s" repeatCount="indefinite"/>
-                        </polyline>
-                        
-                        <!-- Tapa del regalo -->
-                        <rect x="2" y="7" width="20" height="5" 
-                              fill="url(#giftBoxGradient)" stroke="url(#giftBoxGradient)" class="gift-lid">
-                            <animate attributeName="y" values="7;6;7" dur="3s" repeatCount="indefinite"/>
-                        </rect>
-                        
-                        <!-- Cinta vertical -->
-                        <line x1="12" y1="22" x2="12" y2="7" 
-                              stroke="url(#ribbonGradient)" stroke-width="3" class="vertical-ribbon">
-                            <animate attributeName="stroke-width" values="3;4;3" dur="2s" repeatCount="indefinite"/>
-                        </line>
-                        
-                        <!-- Lazos del regalo -->
-                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" 
-                              fill="url(#ribbonGradient)" stroke="url(#ribbonGradient)" class="bow-left">
-                            <animateTransform attributeName="transform" type="rotate" 
-                                values="0 9.75 4.5;5 9.75 4.5;0 9.75 4.5" dur="4s" repeatCount="indefinite"/>
-                        </path>
-                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" 
-                              fill="url(#ribbonGradient)" stroke="url(#ribbonGradient)" class="bow-right">
-                            <animateTransform attributeName="transform" type="rotate" 
-                                values="0 14.25 4.5;-5 14.25 4.5;0 14.25 4.5" dur="4s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <!-- Efectos mágicos -->
-                        <circle cx="8" cy="15" r="1" fill="url(#magicGradient)" opacity="0" class="magic-sparkle">
-                            <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-                            <animate attributeName="r" values="0.5;2;0.5" dur="2s" repeatCount="indefinite" begin="0s"/>
-                        </circle>
-                        <circle cx="16" cy="18" r="0.8" fill="url(#magicGradient)" opacity="0" class="magic-sparkle">
-                            <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="0.7s"/>
-                            <animate attributeName="r" values="0.4;1.6;0.4" dur="2.5s" repeatCount="indefinite" begin="0.7s"/>
-                        </circle>
-                        <circle cx="6" cy="20" r="1.2" fill="url(#magicGradient)" opacity="0" class="magic-sparkle">
-                            <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
-                            <animate attributeName="r" values="0.6;2.4;0.6" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
-                        </circle>
-                        
-                        <!-- Estrellas de felicidad -->
-                        <polygon points="12,1 12.5,2.5 14,2 13,3.5 14.5,4 12.5,4 12,5.5 11.5,4 9.5,4 11,3.5 10,2 11.5,2.5" 
-                                 fill="#f1c40f" opacity="0" class="happiness-star">
-                            <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0s"/>
-                            <animateTransform attributeName="transform" type="rotate" 
-                                values="0 12 3.25;360 12 3.25" dur="1.5s" repeatCount="indefinite" begin="0s"/>
-                        </polygon>
-                        
-                        <!-- Corazones flotantes -->
-                        <text x="18" y="8" font-family="Arial" font-size="4" fill="#e74c3c" opacity="0" class="floating-heart">💝
-                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
-                            <animateTransform attributeName="transform" type="translate" values="0,0;5,-10" dur="3s" repeatCount="indefinite" begin="1s"/>
-                        </text>
-                        <text x="4" y="10" font-family="Arial" font-size="3" fill="#8e44ad" opacity="0" class="floating-heart">✨
-                            <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="1.8s"/>
-                            <animateTransform attributeName="transform" type="translate" values="0,0;-4,-8" dur="2.5s" repeatCount="indefinite" begin="1.8s"/>
-                        </text>
-                    </svg>
+            <!-- Photo Gallery -->
+            <section class="gallery-section">
+                <div class="gallery-container">
+                    <h2 class="section-title">Retratos de Nuestro Amor</h2>
+                    <p class="section-subtitle">Un minuto, un segundo, un instante que queda en la eternidad</p>
+                    
+                    <div class="camera-icon animated-camera">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <defs>
+                                <linearGradient id="cameraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#2980b9;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#1abc9c;stop-opacity:1" />
+                                </linearGradient>
+                                <radialGradient id="flashGradient" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffeb3b;stop-opacity:0" />
+                                </radialGradient>
+                            </defs>
+                            <!-- Cuerpo de la cámara -->
+                            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" 
+                                  fill="url(#cameraGradient)" stroke="url(#cameraGradient)" class="camera-body">
+                                <animateTransform attributeName="transform" type="scale" 
+                                    values="1;1.05;1" dur="3s" repeatCount="indefinite"/>
+                            </path>
+                            
+                            <!-- Lente principal -->
+                            <circle cx="12" cy="13" r="3" fill="none" stroke="url(#cameraGradient)" stroke-width="2" class="camera-lens">
+                                <animate attributeName="stroke-width" values="2;4;2" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            
+                            <!-- Lente interno -->
+                            <circle cx="12" cy="13" r="1.5" fill="url(#cameraGradient)" opacity="0.7" class="inner-lens">
+                                <animate attributeName="r" values="1.5;2;1.5" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            
+                            <!-- Flash -->
+                            <rect x="16" y="6.5" width="2" height="1.5" rx="0.3" fill="#ffeb3b" class="camera-flash">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="0.2s" repeatCount="1" begin="click"/>
+                            </rect>
+                            
+                            <!-- Efecto de flash -->
+                            <circle cx="12" cy="13" r="8" fill="url(#flashGradient)" opacity="0" class="flash-effect">
+                                <animate attributeName="opacity" values="0;0.8;0" dur="0.3s" repeatCount="1" begin="click"/>
+                                <animate attributeName="r" values="0;12;0" dur="0.3s" repeatCount="1" begin="click"/>
+                            </circle>
+                            
+                            <!-- Partículas de captura -->
+                            <circle cx="8" cy="10" r="1" fill="#ffffff" opacity="0" class="capture-particle">
+                                <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
+                                <animateTransform attributeName="transform" type="translate" values="0,0;-3,-6" dur="2s" repeatCount="indefinite" begin="0s"/>
+                            </circle>
+                            <circle cx="16" cy="11" r="0.8" fill="#ffeb3b" opacity="0" class="capture-particle">
+                                <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
+                                <animateTransform attributeName="transform" type="translate" values="0,0;4,-8" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
+                            </circle>
+                        </svg>
+                    </div>
+
+                    <!-- Carrusel -->
+                    <div class="carousel-container">
+                        <button class="carousel-btn carousel-prev" id="prevBtn">❮</button>
+                        <div class="carousel-track-container">
+                            <div class="carousel-track" id="carouselTrack">
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop&crop=center" alt="Pareja de novios en ceremonia">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=400&fit=crop&crop=center" alt="Anillos de boda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=400&fit=crop&crop=center" alt="Pareja romántica en jardín">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=400&fit=crop&crop=center" alt="Decoración de boda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=400&h=400&fit=crop&crop=center" alt="Mesa de boda elegante">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\j.arias1\Downloads\segunda.png" alt="Pareja bailando">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop&crop=center" alt="Vestido de novia elegante">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\j.arias1\Downloads\primera.jpg" alt="Flores de boda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400&h=400&fit=crop&crop=center" alt="Manos con anillos de compromiso">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\j.arias1\Downloads\tercera.jpg" alt="Ramo de novia hermoso">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&h=400&fit=crop&crop=center" alt="Pareja en la playa al atardecer">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\j.arias1\Downloads\cuarto.webp" alt="Detalles de boda elegantes">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-next" id="nextBtn">❯</button>
+                    </div>
+
+                    <div class="carousel-counter">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">12</span> fotos
+                    </div>
                 </div>
+            </section>
 
-                <button class="btn-wedding" onclick="showGifts()">Ver más</button>
-            </div>
-        </section>
+            <!-- Party Information -->
+            <section class="party-section">
+                <div class="party-container">
+                    <h2 class="section-title">Fiesta</h2>
+                    <p class="section-subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
 
-        <!-- RSVP -->
-        <section class="rsvp-section">
-            <div class="rsvp-container">
-                <h2 class="section-title">Confirma tu Asistencia</h2>
-                <p class="section-subtitle">Comparte este hermoso momento con nosotros</p>
-                
-                <div class="whatsapp-icon animated-whatsapp">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <defs>
-                            <linearGradient id="whatsappGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#25d366;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#20ba5a;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#128c7e;stop-opacity:1" />
-                            </linearGradient>
-                            <radialGradient id="messageGradient" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#25d366;stop-opacity:0.3" />
-                            </radialGradient>
-                        </defs>
-                        
-                        <!-- Burbuja principal de WhatsApp -->
-                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" 
-                              fill="url(#whatsappGradient)" stroke="url(#whatsappGradient)" class="whatsapp-bubble">
-                            <animateTransform attributeName="transform" type="scale" 
-                                values="1;1.05;1" dur="3s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <!-- Puntos de conversación animados -->
-                        <circle cx="10" cy="11" r="1" fill="#ffffff" opacity="0" class="chat-dot">
-                            <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0s"/>
-                            <animate attributeName="r" values="0.8;1.2;0.8" dur="1.5s" repeatCount="indefinite" begin="0s"/>
-                        </circle>
-                        <circle cx="12" cy="11" r="1" fill="#ffffff" opacity="0" class="chat-dot">
-                            <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
-                            <animate attributeName="r" values="0.8;1.2;0.8" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
-                        </circle>
-                        <circle cx="14" cy="11" r="1" fill="#ffffff" opacity="0" class="chat-dot">
-                            <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
-                            <animate attributeName="r" values="0.8;1.2;0.8" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
-                        </circle>
-                        
-                        <!-- Ondas de conexión -->
-                        <circle cx="12" cy="11" r="10" fill="none" stroke="#25d366" stroke-width="1" opacity="0" class="connection-wave">
-                            <animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-                            <animate attributeName="r" values="8;15;8" dur="2s" repeatCount="indefinite" begin="0s"/>
-                        </circle>
-                        <circle cx="12" cy="11" r="8" fill="none" stroke="#20ba5a" stroke-width="1.5" opacity="0" class="connection-wave">
-                            <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite" begin="0.7s"/>
-                            <animate attributeName="r" values="6;12;6" dur="2s" repeatCount="indefinite" begin="0.7s"/>
-                        </circle>
-                        
-                        <!-- Indicador de mensaje enviado -->
-                        <path d="M8 12l2 2 4-4" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0" class="sent-checkmark">
-                            <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" begin="2s"/>
-                            <animate attributeName="stroke-width" values="1;2;1" dur="1s" repeatCount="indefinite" begin="2s"/>
-                        </path>
-                        
-                        <!-- Notificación de mensaje -->
-                        <circle cx="18" cy="6" r="2" fill="#ff3030" opacity="0" class="notification-badge">
-                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
-                            <animate attributeName="r" values="1.5;2.5;1.5" dur="3s" repeatCount="indefinite" begin="1s"/>
-                        </circle>
-                        <text x="18" y="6.5" font-family="Arial" font-size="2" fill="#ffffff" text-anchor="middle" opacity="0" class="notification-number">1
-                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
-                        </text>
-                        
-                        <!-- Corazones de amor -->
-                        <text x="6" y="8" font-family="Arial" font-size="3" fill="#ff69b4" opacity="0" class="love-emoji">💕
-                            <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-                            <animateTransform attributeName="transform" type="translate" values="0,0;-3,-8" dur="2s" repeatCount="indefinite" begin="0s"/>
-                        </text>
-                        <text x="20" y="16" font-family="Arial" font-size="2.5" fill="#ff1493" opacity="0" class="love-emoji">💖
-                            <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="1.5s"/>
-                            <animateTransform attributeName="transform" type="translate" values="0,0;4,-10" dur="2.5s" repeatCount="indefinite" begin="1.5s"/>
-                        </text>
-                        
-                        <!-- Efectos de brillo -->
-                        <circle cx="16" cy="8" r="1" fill="url(#messageGradient)" opacity="0" class="message-sparkle">
-                            <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
-                            <animate attributeName="r" values="0.5;2;0.5" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
-                        </circle>
-                    </svg>
+                    <div class="party-grid">
+                        <div class="party-card">
+                            <div class="party-icon animated-music">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <defs>
+                                        <linearGradient id="musicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                                            <stop offset="50%" style="stop-color:#f39c12;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+                                        </linearGradient>
+                                        <radialGradient id="noteGradient" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:0.8" />
+                                        </radialGradient>
+                                    </defs>
+                                    <!-- Nota musical principal -->
+                                    <path d="M9 18V5l12-2v13" fill="none" stroke="url(#musicGradient)" stroke-width="2.5" class="music-note">
+                                        <animate attributeName="stroke-width" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite"/>
+                                    </path>
+                                    
+                                    <!-- Círculos de notas -->
+                                    <circle cx="6" cy="18" r="3" fill="url(#noteGradient)" stroke="url(#musicGradient)" class="note-circle">
+                                        <animateTransform attributeName="transform" type="scale" 
+                                            values="1;1.2;1" dur="2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="18" cy="16" r="3" fill="url(#noteGradient)" stroke="url(#musicGradient)" class="note-circle">
+                                        <animateTransform attributeName="transform" type="scale" 
+                                            values="1;1.2;1" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                                    </circle>
+                                    
+                                </svg>
+                            </div>
+                            <h3 class="event-title">Música</h3>
+                            <p>¡Preparen sus mejores pasos! Tendremos pista abierta toda la noche.</p>
+                        </div>
+                        <div class="party-card">
+                            <div class="party-icon animated-dresscode">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 7l3-5 3 5 4 2-3 11H8L5 9l4-2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="event-title">Dress Code</h3>
+                            <p>Elegante sport, colores cálidos y detalles dorados.</p>
+                        </div>
+                        <div class="party-card">
+                            <div class="party-icon animated-clipboard">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 3h6a2 2 0 0 1 2 2v2H7V5a2 2 0 0 1 2-2z"/>
+                                    <rect x="7" y="7" width="10" height="14" rx="2"/>
+                                    <path d="M9 11h6M9 15h6"/>
+                                </svg>
+                            </div>
+                            <h3 class="event-title">Detalles</h3>
+                            <p>Habrá sorpresas durante la noche, no llegues tarde.</p>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="hashtag">#rafaelyjuana</div>
-                
-                <button class="btn-wedding" onclick="confirmAttendance()">Confirmar Asistencia</button>
-            </div>
-        </section>
+            <!-- Gifts & RSVP -->
+            <section class="gifts-section">
+                <div class="gifts-container">
+                    <h2 class="section-title">Nuestro regalo es tu presencia</h2>
+                    <p class="section-subtitle">Si aun así deseas hacernos un obsequio, te dejamos estas opciones</p>
+                    <div class="gift-icon animated-gift">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path class="gift-lid" d="M20 7H4v4h16V7z"/>
+                            <path d="M20 11H4v10h16V11z"/>
+                            <path d="M12 7V21"/>
+                            <path d="M12 7s-2-2-2-3a2 2 0 0 1 4 0c0 1-2 3-2 3z"/>
+                        </svg>
+                    </div>
+                    <p>Alias: <strong>rafa-y-juana</strong></p>
+                </div>
+            </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p>Con amor,</p>
-                <h3>Rafael & Juana</h3>
-                <p class="footer-date">15 de Agosto, 2025</p>
-            </div>
-        </footer>
+            <section class="rsvp-section">
+                <div class="rsvp-container">
+                    <h2 class="section-title">Confirma tu asistencia</h2>
+                    <p class="section-subtitle">Tu respuesta nos ayuda a organizar todo mejor</p>
+                    <div class="whatsapp-icon animated-whatsapp">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.5 8.5 0 1 1-15.6 4.5L3 21l5-1.4A8.5 8.5 0 1 1 21 11.5z"/>
+                            <path d="M16 13c-.5 1-1.5 1.5-2.5 1.5-.7 0-1.5-.2-2-.6-1.8-1.2-3-3-3.4-5-.1-.5.2-1 .7-1.1l1.2-.2c.5-.1.9.2 1 .7l.3 1.2c.1.5-.2 1-.7 1.1l-.3.1c.5 1 1.2 1.8 2.1 2.4l.2-.3c.3-.4.9-.5 1.3-.2l1 .7c.5.3.6.9.3 1.3z"/>
+                        </svg>
+                    </div>
+                    <p>Envíanos un mensaje para confirmar tu presencia.</p>
+                    <p class="hashtag">#RafaelYJuana</p>
+                </div>
+            </section>
+        </div>
     </div>
 
     <!-- Toast notification -->
@@ -764,7 +476,14 @@
         <div id="toastContent"></div>
     </div>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Rafael & Juana</h3>
+            <p class="footer-date">15 de Agosto de 2025</p>
+        </div>
+    </footer>
+
     <script src="java2.js"></script>
 </body>
 </html>
