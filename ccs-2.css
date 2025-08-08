@@ -16,6 +16,13 @@
     --shadow-gold: 0 4px 20px hsl(42 85% 55% / 0.25);
 }
 
+/* Contenedor centrado tipo tarjeta */
+.site-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
 /* Animaciones de iconos modernos */
 .animated-heart {
     transition: transform 0.3s ease;
@@ -263,18 +270,38 @@ body {
     box-shadow: var(--shadow-gold);
 }
 
-/* Hero Section */
-.hero-section {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+/* Hero Section dividida 50/50 */
+.hero-wrapper {
+    position: relative;
+    z-index: 0;
+}
+
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60vh; /* 60vh solicitado */
+}
+
+/* Lado izquierdo: imagen fija con efecto scroll (parallax) */
+.hero-left {
+    position: relative;
     background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&crop=center');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    z-index: -1;
+    background-attachment: fixed; /* mantiene efecto */
+}
+
+/* Lado derecho: sin efecto, solo imagen estática */
+.hero-right {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .hero-overlay {
@@ -349,8 +376,9 @@ body {
 .content {
     position: relative;
     z-index: 1;
-    margin-top: 100vh;
-    background: linear-gradient(to bottom, transparent 0%, hsl(var(--cream)) 10%);
+    /* Ya no empuja 100vh completos porque la portada es 60vh */
+    margin-top: 0;
+    background: hsl(var(--cream));
 }
 
 /* Sections */
@@ -767,36 +795,34 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .hero-split { grid-template-columns: 1fr; height: 60vh; }
+}
+
 @media (max-width: 768px) {
     .names {
         font-size: 3rem;
     }
-    
+    .site-container { padding: 0 1rem; max-width: 90%; }
     .section-title {
         font-size: 2rem;
     }
-    
     .countdown-number {
         font-size: 3rem;
     }
-    
     .countdown-container {
         gap: 1.5rem;
     }
-    
     .events-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
     .party-grid {
         grid-template-columns: 1fr;
     }
-
     .carousel-item {
         height: 250px;
     }
-    
     .carousel-btn {
         width: 40px;
         height: 40px;
@@ -808,23 +834,18 @@ body {
     .names {
         font-size: 2.5rem;
     }
-    
     .quote {
         font-size: 1rem;
     }
-    
     .countdown-number {
         font-size: 2.5rem;
     }
-
     .carousel-item {
         height: 200px;
     }
-    
     .modal-content {
         padding: 1.5rem;
     }
-    
     .modal-names {
         font-size: 1.5rem;
     }
