@@ -14,6 +14,8 @@
     --warm-white: 35 15% 98%;
     --shadow-elegant: 0 10px 30px -10px hsl(35 65% 45% / 0.3);
     --shadow-gold: 0 4px 20px hsl(42 85% 55% / 0.25);
+    /* Nuevo tono para laterales tipo papel (blanco piedra) */
+    --paper-side: 0 0% 97%;
 }
 
 /* Contenedor centrado tipo tarjeta */
@@ -153,14 +155,21 @@ body {
     background-color: hsl(var(--cream));
     color: hsl(var(--foreground));
     line-height: 1.6;
-    /* Textura suave en los lados */
+    /* Laterales en tono blanco-piedra y sutil textura */
     background-image:
-      radial-gradient(circle at 0% 50%, rgba(0,0,0,0.06) 0, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0) 60%),
-      radial-gradient(circle at 100% 50%, rgba(0,0,0,0.06) 0, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0) 60%),
-      linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9));
+      linear-gradient(to right,
+        hsl(var(--paper-side)) 0,
+        hsl(var(--paper-side)) 18vw,
+        transparent 18vw,
+        transparent calc(100% - 18vw),
+        hsl(var(--paper-side)) calc(100% - 18vw),
+        hsl(var(--paper-side)) 100%
+      ),
+      radial-gradient(circle at 0% 50%, rgba(0,0,0,0.05) 0, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0) 60%),
+      radial-gradient(circle at 100% 50%, rgba(0,0,0,0.05) 0, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0) 60%);
     background-repeat: no-repeat;
-    background-size: 20vw 100%, 20vw 100%, 100% 100%;
-    background-position: left top, right top, center;
+    background-size: 100% 100%, 18vw 100%, 18vw 100%;
+    background-position: center, left center, right center;
 }
 
 /* Tipografía */
@@ -822,7 +831,16 @@ body {
     .names {
         font-size: 3rem;
     }
-    .site-container { padding: 0 1rem; max-width: 90%; }
+    /* En móvil, eliminar laterales y usar fondo uniforme */
+    body { 
+        background-image: none; 
+        background-color: hsl(var(--warm-white)); 
+    }
+    /* El contenedor ocupa todo el ancho útil en móvil */
+    .site-container { padding: 0 1rem; max-width: none; }
+    /* La portada sin bordes redondeados para encajar al 100% */
+    .hero-split { border-radius: 0; }
+
     .section-title {
         font-size: 2rem;
     }
